@@ -10,14 +10,31 @@ const Home = () => {
   ];
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
+    // Set loading animation for 2 seconds
+    const loadingTimeout = setTimeout(() => setIsLoading(false), 2000);
+
+    // Carousel interval
     const interval = setInterval(() => {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
     }, 5000); // Change image every 5 seconds
 
-    return () => clearInterval(interval); // Cleanup interval on component unmount
+    return () => {
+      clearTimeout(loadingTimeout); // Cleanup loading timeout
+      clearInterval(interval); // Cleanup carousel interval
+    };
   }, [images.length]);
+
+  if (isLoading) {
+    return (
+      <div className="loading-container">
+        <div className="spinner"></div>
+        <h1>Loading...</h1>
+      </div>
+    );
+  }
 
   return (
     <div className="home">

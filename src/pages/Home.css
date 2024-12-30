@@ -2,10 +2,10 @@
 .home {
   padding: 100px 20px;
   text-align: center;
-  background: linear-gradient(135deg, #0073e6, #ffbf00); /* Gradient background */
+  background: linear-gradient(135deg, #0073e6, #ffbf00);
   color: white;
-  animation: fadeInUp 1s ease-out; /* Smooth fade-in effect */
-  box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.3); /* Inset shadow for depth */
+  animation: fadeInUp 1s ease-out;
+  box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.3);
 }
 
 /* Header Styling */
@@ -17,7 +17,7 @@
   text-transform: uppercase;
   letter-spacing: 1.5px;
   animation: slideIn 1s ease-out forwards;
-  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4); /* Add subtle text shadow */
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
 }
 
 .home p {
@@ -37,9 +37,9 @@
 .what-we-do {
   margin-top: 60px;
   padding: 40px;
-  background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
+  background-color: rgba(255, 255, 255, 0.9);
   border-radius: 15px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Softer shadow */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   animation: fadeInUp 1s ease-out 0.6s forwards;
   opacity: 0;
 }
@@ -51,7 +51,7 @@
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 1.2px;
-  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3); /* Subtle text shadow */
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
 }
 
 .what-we-do p {
@@ -90,8 +90,8 @@
 
 /* Hover Effects for Carousel */
 .carousel-image:hover {
-  transform: scale(1.05); /* Slight zoom effect */
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Enhance hover shadow */
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
 /* Call-to-Action Button Styling */
@@ -108,12 +108,119 @@
 }
 
 .cta-btn:hover {
-  background: linear-gradient(135deg, #ffbf00, #0073e6); /* Gradient hover effect */
+  background: linear-gradient(135deg, #ffbf00, #0073e6);
   transform: scale(1.1);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
 
-/* Keyframes for Animations */
+/* Enhanced Loading Animation Styles */
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #0073e6, #ffbf00);
+  color: white;
+  font-family: 'Arial', sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Animated Background Effect */
+.loading-container::before {
+  content: '';
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.1) 25%,
+    transparent 25%,
+    transparent 50%,
+    rgba(255, 255, 255, 0.1) 50%,
+    rgba(255, 255, 255, 0.1) 75%,
+    transparent 75%
+  );
+  background-size: 30px 30px;
+  animation: backgroundMove 2s linear infinite;
+  z-index: 1;
+}
+
+/* Modern Spinner Design */
+.spinner {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  z-index: 2;
+}
+
+.spinner::before,
+.spinner::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  animation: pulse-ring 2s linear infinite;
+}
+
+.spinner::before {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.1);
+  animation: pulse-dot 2s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+}
+
+.spinner::after {
+  width: 80%;
+  height: 80%;
+  background-color: rgba(255, 255, 255, 0.2);
+  top: 10%;
+  left: 10%;
+  animation: pulse-dot 2s cubic-bezier(0.455, 0.03, 0.515, 0.955) -0.5s infinite;
+}
+
+/* Loading Text Animation */
+.loading-container h1 {
+  margin-top: 30px;
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  z-index: 2;
+  background: linear-gradient(90deg, #fff, #ffbf00, #fff);
+  background-size: 200% auto;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: shine 3s linear infinite;
+}
+
+/* Progress Bar */
+.loading-progress {
+  width: 200px;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  margin-top: 20px;
+  overflow: hidden;
+  position: relative;
+  z-index: 2;
+}
+
+.loading-progress::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 30%;
+  background: white;
+  border-radius: 4px;
+  animation: progress 2s ease-in-out infinite;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+/* All Animations */
 @keyframes fadeInUp {
   0% {
     opacity: 0;
@@ -133,5 +240,68 @@
   100% {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes pulse-ring {
+  0% {
+    transform: scale(0.7);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scale(1);
+    opacity: 0.2;
+  }
+  100% {
+    transform: scale(0.7);
+    opacity: 0.5;
+  }
+}
+
+@keyframes pulse-dot {
+  0% {
+    transform: scale(0.8);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.8);
+  }
+}
+
+@keyframes shine {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
+}
+
+@keyframes progress {
+  0% {
+    left: -30%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes backgroundMove {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
   }
 }

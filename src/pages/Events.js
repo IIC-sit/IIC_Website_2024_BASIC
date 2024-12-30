@@ -4,7 +4,6 @@ const Events = () => {
   return (
     <div className="events">
       <h1>Upcoming Events</h1>
-      <p>Join us for exciting events that spark creativity, innovation, and collaboration.</p>
 
       <div className="event-list">
         <div className="event-box">
