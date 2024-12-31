@@ -1,0 +1,119 @@
+
+/* Events Section Styling */
+.events {
+    padding: 100px 20px;
+    background: linear-gradient(135deg, #0073e6, #ffbf00); /* Vibrant gradient background */
+    color: white;
+    text-align: center;
+    animation: fadeInUp 1s ease-out; /* Fade-in animation */
+    box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.3); /* Inset shadow for depth */
+  }
+  
+  .events h2 {
+    font-size: 3rem;
+    color: #fff;
+    margin-bottom: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    animation: slideIn 1s ease-out forwards; /* Slide-in animation */
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4); /* Add subtle text shadow */
+  }
+  
+  .event-list {
+    display: flex;
+    gap: 30px;
+    overflow-x: auto; /* Horizontal scrolling for small screens */
+    padding: 20px 0;
+    justify-content: center; /* Center align the list */
+  }
+  
+  .event-box {
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
+    border: none; /* Removed solid border */
+    padding: 30px;
+    width: 300px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Softer shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    cursor: pointer;
+    transform: translateY(20px); /* Initial position for animation */
+    animation: fadeInUp 1s ease-out 0.3s forwards; /* Fade-in and slide-up animation */
+  }
+  
+  .event-box:hover {
+    transform: translateY(-10px) scale(1.05); /* Hover effect with scale */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
+    background: linear-gradient(135deg, #ffbf00, #0073e6); /* Gradient background on hover */
+    color: white; /* Ensure text contrast on hover */
+  }
+  
+  .event-box h3 {
+    font-size: 1.6rem;
+    color: #0073e6;
+    margin-bottom: 15px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  .event-box h3:hover {
+    color: #ffbf00; /* Change color on hover */
+  }
+  
+  .event-box p {
+    color: #974141;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    transition: color 0.3s ease;
+  }
+  
+  .event-box p:hover {
+    color: #120d47; /* Slight color change on hover */
+  }
+  
+  .event-box a {
+    display: inline-block;
+    margin-top: 20px;
+    color: #0073e6;
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+    padding: 8px 15px;
+    border: 2px solid #0073e6;
+    border-radius: 30px;
+    transition: transform 0.3s ease, color 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .event-box a:hover {
+    text-decoration: none;
+    color: #fff;
+    background-color: #0073e6; /* Hover effect on link */
+    transform: translateY(-3px); /* Slight hover animation */
+  }
+  
+  /* Keyframes for Animations */
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes slideIn {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
