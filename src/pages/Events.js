@@ -10,7 +10,7 @@ const Events = () => {
           <h3>Recruitments</h3>
           <p>January 02 and 03 2025</p>
           <p>Join the Institution's Innovation Council to unlock your creativity, collaborate on groundbreaking ideas, and drive innovation that makes a difference!</p>
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLSdPuBdN4s5mInDoZ1HwxE8qG_S2_iVyl1NvMV1BNyCdCAriWA/viewform?usp=sharing" target="_blank" rel="noopener noreferrer">See More</a>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSc2LPAL_KQ182xcKPWM24Q_huud1LfORcgkzRNEKD2GAcz3tg/viewform?usp=preview" target="_blank" rel="noopener noreferrer">See More</a>
         </div>
         
       </div>

@@ -39,6 +39,14 @@ const Home = () => {
   return (
     <div className="home">
       <h1>Welcome to the Institution's Innovation Council</h1>
+      {/* Sliding image carousel */}
+      <div className="image-carousel">
+        <img
+          src={images[currentImageIndex]}
+          alt={`Slide ${currentImageIndex + 1}`}
+          className="carousel-image"
+        />
+      </div>
       <p>
         We foster innovation and creativity among students, bringing together the brightest minds to work on
         impactful projects and initiatives.
@@ -54,14 +62,7 @@ const Home = () => {
         </p>
       </section>
 
-      {/* Sliding image carousel */}
-      <div className="image-carousel">
-        <img
-          src={images[currentImageIndex]}
-          alt={`Slide ${currentImageIndex + 1}`}
-          className="carousel-image"
-        />
-      </div>
+      
     </div>
   );
 };

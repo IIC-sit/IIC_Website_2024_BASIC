@@ -5,11 +5,14 @@ import About from "./pages/About";
 import Team from "./pages/Team";
 import Events from "./pages/Events";
 import Contact from "./pages/Contact";
-import TBI from "./pages/Tbi";
+// import Gallery from "./pages/Gallery";
+// import TBI from "./pages/Tbi"; // TBI import commented
 import "./App.css";
 import "./Team.css";
 import "./About.css";
 import "./Events.css";
+// import "./Gallery.css";
+// import "./Tbi.css"; // TBI styles commented
 import "./Contact.css";
 
 const App = () => {
@@ -35,7 +38,7 @@ const App = () => {
               <img src="IIC-logo (1).jpeg" alt="IIC Logo" className="logo-image" />
             </div>
             <div>
-              <h1>Institution's Innovation Council</h1>
+              <h1>SIDDAGANGA INSTITUTE OF TECHNOLOGY, TUMAKURU</h1>
             </div>
             {/* Hamburger Menu */}
             <div className="hamburger" onClick={toggleMenu}>
@@ -45,12 +48,12 @@ const App = () => {
             </div>
             {/* Navigation Links */}
             <ul className={`nav-links ${menuOpen ? "active" : ""}`}>
-              <li><Link to="/" onClick={closeMenu}>Home</Link></li>
-              <li><Link to="/about" onClick={closeMenu}>About</Link></li>
-              <li><Link to="/team" onClick={closeMenu}>Team</Link></li>
-              <li><Link to="/events" onClick={closeMenu}>Events</Link></li>
-              <li><Link to="/contact" onClick={closeMenu}>Contact</Link></li>
-              <li><Link to="/Tbi" onClick={closeMenu}>TBI</Link></li>
+              <Link to="/" onClick={closeMenu}>Home</Link>
+              <Link to="/about" onClick={closeMenu}>About</Link>
+              <Link to="/team" onClick={closeMenu}>Team</Link>
+              <Link to="/events" onClick={closeMenu}>Events</Link>
+              <Link to="/contact" onClick={closeMenu}>Contact</Link>
+              {/* <Link to="/Tbi" onClick={closeMenu}>TBI</Link> */}
             </ul>
           </nav>
         </header>
@@ -61,7 +64,7 @@ const App = () => {
           <Route path="/team" element={<Team />} />
           <Route path="/events" element={<Events />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/Tbi" element={<TBI />} />
+          {/* <Route path="/Tbi" element={<TBI />} /> */}
         </Routes>
       </div>
     </Router>

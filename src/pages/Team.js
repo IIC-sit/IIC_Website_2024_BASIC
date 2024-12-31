@@ -34,61 +34,71 @@ const Team = () => {
       </p>
 
       <div className="team-members">
-        <div className="team-member-card">
-          <img
-            src="iic-coordinator.png"
-            alt="Sharanya"
-            className="team-member-img"
-          />
-          <h3>Sharanya R</h3>
-          <p>Executive Chair</p>
-        </div>
-        <div className="team-member-card">
-          <img
-            src="https://via.placeholder.com/150"
-            alt="Akshatha"
-            className="team-member-img"
-          />
-          <h3>Akshatha A</h3>
-          <p>Chief Coordinator</p>
-        </div>
-        <div className="team-member-card">
-          <img
-            src="https://via.placeholder.com/150"
-            alt="Sagar"
-            className="team-member-img"
-          />
-          <h3>Sagar K C</h3>
-          <p>Head Facilitator</p>
-        </div>
-        <div className="team-member-card">
-          <img
-            src="Sinc.jpg"
-            alt="Sinchana"
-            className="team-member-img"
-          />
-          <h3>Sinchana K R</h3>
-          <p>Lead Organizer</p>
-        </div>
-        <div className="team-member-card">
-          <img
-            src="https://via.placeholder.com/150"
-            alt="Siri"
-            className="team-member-img"
-          />
-          <h3>Siri M V</h3>
-          <p>Chief Director</p>
-        </div>
-        <div className="team-member-card">
-          <img
-            src="https://via.placeholder.com/150"
-            alt="Bhargav"
-            className="team-member-img"
-          />
-          <h3>Bhargav K K</h3>
-          <p>Chief Director</p>
-        </div>
-      </div>
+  <div className="team-member-card">
+    <img
+      src="Sharanya.jpeg"
+      alt="Sharanya"
+      className="team-member-img"
+    />
+    <h3>Sharanya R</h3>
+    <p>Executive Chair</p>
+  </div>
+  <div className="team-member-card">
+    <img
+      src="BKK.jpg"
+      alt="Bhargav"
+      className="team-member-img"
+    />
+    <h3>Bhargav K K</h3>
+    <p>Chief Director</p>
+  </div>
+  <div className="team-member-card">
+    <img
+      src="Akshatha RS.jpeg"
+      alt="Akshatha"
+      className="team-member-img"
+    />
+    <h3>Akshatha R S</h3>
+    <p>Content Team Lead</p>
+  </div>
+  <div className="team-member-card">
+    <img
+      src="Suprith.jpeg"
+      alt="Suprith"
+      className="team-member-img"
+    />
+    <h3>Suprith Bharadwaj</h3>
+    <p>Senior Developer</p>
+  </div>
+  <div className="team-member-card">
+    <img
+      src="Chinmayi.jpeg"
+      alt="Chinmayi"
+      className="team-member-img"
+    />
+    <h3>Chinmayi K P</h3>
+    <p>Design Team Lead</p>
+  </div>
+  <div className="team-member-card">
+    <img
+      src="Sinc.jpg"
+      alt="Sinchana"
+      className="team-member-img"
+    />
+    <h3>Sinchana</h3>
+    <p>Report Team</p>
+  </div>
+  <div className="team-member-card">
+    <img
+      src="ananya.jpeg"
+      alt="Ananya"
+      className="team-member-img"
+    />
+    <h3>Ananya</h3>
+    <p>Senior Developer</p>
+  </div>
+</div>
+
 
       {/* Space between sections */}
       <div style={{ margin: "40px 0" }}></div>

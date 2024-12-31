@@ -46,7 +46,7 @@ html, body {
   z-index: 1000;
   padding: 0.75rem 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow-md);
 }
 
 .navbar {
@@ -55,7 +55,7 @@ html, body {
   justify-content: space-between;
   padding: 0 2.5rem;
   height: 8rem;
-  flex-wrap: wrap; /* Ensures that content wraps on smaller screens */
+  flex-wrap: nowrap; /* Prevent wrapping */
 }
 
 .logo {
@@ -65,12 +65,9 @@ html, body {
 }
 
 .logo-image {
-  width: 60px;
-  height: 60px;
+  width: 80px;
+  height: 80px;
   border-radius: 16px;
-  object-fit: cover;
-  transition: var(--transition);
-  box-shadow: var(--shadow-sm);
   border: 2px solid rgba(255, 255, 255, 0.8);
 }
 
@@ -193,6 +190,7 @@ html, body {
   /* Mobile Navbar */
   .navbar {
     padding: 0 1.5rem;
+    height: auto; /* Allow the navbar height to adjust on mobile */
   }
 
   /* Hide nav links on mobile */
@@ -225,6 +223,19 @@ html, body {
 
   .hamburger .bar {
     transition: all 0.3s ease;
+  }
+
+  /* Reduce font size for the h1 in mobile */
+  h1 {
+    font-size: 1.5rem;
+    padding: 0 10px;
+    text-align: center;
+  }
+
+  /* Adjust logo size for mobile */
+  .logo-image {
+    width: 60px; /* Reduced size for mobile */
+    height: 60px;
   }
 
   /* Features Section Grid Adjustments for Mobile */
