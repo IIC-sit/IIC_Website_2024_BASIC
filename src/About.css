@@ -1,0 +1,101 @@
+
+/* About Section Styling */
+.about {
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(135deg, #0073e6, #ffbf00); /* Vibrant gradient background */
+    color: white; /* Ensure text contrast */
+    animation: fadeInUp 1s ease-out; /* Smooth fade-in effect */
+    position: relative;
+    box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.3); /* Inset shadow for depth */
+  }
+  
+  .about h2 {
+    font-size: 3rem;
+    color: #fff;
+    margin-bottom: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards 0.2s; /* Text fade-in effect */
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4); /* Subtle text shadow for readability */
+  }
+  
+  .about p {
+    font-size: 1.2rem;
+    color: #f4f7fc;
+    margin-bottom: 40px;
+    line-height: 1.8;
+    font-weight: 400;
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards 0.4s; /* Smooth fade-in for paragraph */
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3); /* Enhance text visibility */
+  }
+  
+  .about .cta-btn {
+    padding: 12px 35px;
+    background-color: #0073e6;
+    color: #fff;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+    transition: transform 0.4s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    z-index: 1;
+    overflow: hidden;
+  }
+  
+  .about .cta-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, #ffbf00, #0073e6); /* Gradient hover effect */
+    border-radius: 50px;
+    z-index: -1;
+    transition: all 0.3s ease;
+    transform: scaleX(0);
+    transform-origin: right;
+  }
+  
+  .about .cta-btn:hover {
+    background-color: #ffbf00;
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+    color: #fff;
+  }
+  
+  .about .cta-btn:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+  
+  /* Keyframes for Animations */
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  

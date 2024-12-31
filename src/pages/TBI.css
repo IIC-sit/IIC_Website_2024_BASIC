@@ -1,0 +1,141 @@
+/* TBI Section Styling */
+.tbi {
+    padding: 100px 20px;
+    text-align: center;
+    background: linear-gradient(135deg, #125e66, #46d0e5); /* Gradient background */
+    color: white;
+    animation: fadeInUp 1s ease-out; /* Smooth fade-in effect */
+    box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.3); /* Inset shadow for depth */
+  }
+  
+  /* Header Styling */
+  .tbi h1 {
+    font-size: 3rem;
+    color: #fff;
+    margin-bottom: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    animation: slideIn 1s ease-out forwards;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4); /* Add subtle text shadow */
+  }
+  
+  .tbi p {
+    font-size: 1.2rem;
+    color: #fff;
+    margin-bottom: 40px;
+    line-height: 1.8;
+    font-weight: 400;
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards 0.4s;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* Image Carousel Section */
+  .tbi-carousel {
+    margin-top: 50px;
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    height: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    animation: fadeInUp 1s ease-out 0.8s forwards;
+    opacity: 0;
+  }
+  
+  .carousel-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+    transition: opacity 0.5s ease-in-out, transform 0.3s ease;
+  }
+  
+  /* Hover Effects for Carousel */
+  .carousel-image:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Enhance hover shadow */
+  }
+  
+  /* Information Section */
+  .tbi-info {
+    margin-top: 60px;
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Softer shadow */
+    animation: fadeInUp 1s ease-out 0.6s forwards;
+    opacity: 0;
+  }
+  
+  .tbi-info h2 {
+    font-size: 2.5rem;
+    color: #4682b4;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3); /* Subtle text shadow */
+  }
+  
+  .tbi-info p {
+    font-size: 1.1rem;
+    color: #444;
+    line-height: 1.8;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+  }
+  
+  
+  
+  /* Keyframes for Animations */
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes slideIn {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .tbi-carousel {
+      max-width: 90%;
+      height: 300px;
+    }
+  
+    .tbi-info {
+      padding: 20px;
+    }
+  
+    .tbi h1 {
+      font-size: 2.5rem;
+    }
+  
+    .tbi-info h2 {
+      font-size: 2rem;
+    }
+  }
+  
