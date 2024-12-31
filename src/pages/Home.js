@@ -4,9 +4,9 @@ import './Home.css'; // Adjust the path if the CSS file is in a different direct
 const Home = () => {
   // Array of image URLs for the carousel
   const images = [
-    'iic-what1.jpeg', // Replace with actual image paths
-    'iic-what2.jpeg',
-    'iic-what3.jpeg',
+    '/iic-what1.jpeg', // Replace with actual image paths or import them if they are local
+    '/iic-what2.jpeg',
+    '/iic-what3.jpeg',
   ];
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -30,8 +30,16 @@ const Home = () => {
   if (isLoading) {
     return (
       <div className="loading-container">
-        <div className="spinner"></div>
-        <h1>Loading...</h1>
+        <img 
+          src="/logo_removedbg.png" 
+          alt="IIC Logo" 
+          className="loading-logo" 
+        />
+        <div className="loading-dots">
+          <span>.</span>
+          <span>.</span>
+          <span>.</span>
+        </div>
       </div>
     );
   }
@@ -43,7 +51,7 @@ const Home = () => {
       <div className="image-carousel">
         <img
           src={images[currentImageIndex]}
-          alt={`Slide ${currentImageIndex + 1}`}
+          alt={`Slide ${currentImageIndex + 1}`} // Corrected alt text
           className="carousel-image"
         />
       </div>
@@ -61,8 +69,6 @@ const Home = () => {
           empowering them to excel in their respective fields.
         </p>
       </section>
-
-      
     </div>
   );
 };
